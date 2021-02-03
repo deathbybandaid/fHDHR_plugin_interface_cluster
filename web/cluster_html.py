@@ -33,7 +33,7 @@ class Cluster_HTML():
 
         locations_list = []
 
-        if self.fhdhr.config.dict["fhdhr"]["discovery_address"]:
+        if self.fhdhr.device.ssdp.multicast_address:
 
             locations_list.append(self.location_dict)
 

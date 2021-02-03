@@ -9,7 +9,7 @@ class Plugin_OBJ():
 
         self.friendlyname = self.fhdhr.config.dict["cluster"]["friendlyname"] or "%s %s" % (self.fhdhr.config.dict["fhdhr"]["friendlyname"], self.fhdhr.origins.valid_origins[0])
 
-        if self.plugin_utils.config.dict["fhdhr"]["discovery_address"]:
+        if self.plugin_utils.ssdp.multicast_address:
             self.startup_sync()
 
     def cluster(self):
