@@ -22,7 +22,7 @@ class Cluster_HTML():
                               "url_query": self.fhdhr.api.base_quoted
                               }
 
-        self.template_file = pathlib.Path(plugin_utils.config.dict["plugin_web_paths"][plugin_utils.namespace]["path"]).joinpath('cluster.html')
+        self.template_file = pathlib.Path(plugin_utils.path).joinpath('cluster.html')
         self.template = StringIO()
         self.template.write(open(self.template_file).read())
 
